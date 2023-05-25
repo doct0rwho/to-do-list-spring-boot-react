@@ -130,7 +130,7 @@ function Todos({isAuthenticated, setIsAuthenticated}) {
 
 	const markCompleted = async (id) => {
 		try {
-      await axios.put(`http://34.226.168.162:3001/api/todo/${id}/markcomplete`, {}, {
+      await axios.put(`http://demcehnko-aleks-blue-green-lb-1120576598.us-east-1.elb.amazonaws.com/api/todo/${id}/markcomplete`, {}, {
 				headers: {
 					'Authorization': `Bearer ${sessionStorage.getItem('token')}`
 				}
@@ -149,7 +149,7 @@ function Todos({isAuthenticated, setIsAuthenticated}) {
 
 	const deleteTodo = async (id) => {
 		try {
-      await axios.delete(`http://34.226.168.162:3001/api/todo/${id}`, {
+      await axios.delete(`http://demcehnko-aleks-blue-green-lb-1120576598.us-east-1.elb.amazonaws.com/api/todo/${id}`, {
 				headers: {
 					'Authorization': `Bearer ${sessionStorage.getItem('token')}`
 				}
