@@ -19,7 +19,7 @@ function AddTodo({isAuthenticated, setIsAuthenticated}) {
     e.preventDefault();
 
     try {
-      await axios.post('http://100.25.160.89:3001/api/todo', {title, targetDate}, {
+      await axios.post('http://demcehnko-aleks-blue-green-lb-1120576598.us-east-1.elb.amazonaws.com/api/todo', {title, targetDate}, {
         headers: {
           'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
         }

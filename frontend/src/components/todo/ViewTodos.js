@@ -25,12 +25,12 @@ function Todos({isAuthenticated, setIsAuthenticated}) {
 		const loadData = async () => {
 			let response = null;
 			try {
-				let url = `http://34.226.168.162:3001/api/todo/${pageNumber - 1}/${pageSize}`;
+				let url = `http://demcehnko-aleks-blue-green-lb-1120576598.us-east-1.elb.amazonaws.com/api/todo/${pageNumber - 1}/${pageSize}`;
 
 				if(filter === 'Completed'){
-					url = `http://34.226.168.162:3001/api/todo/${pageNumber - 1}/${pageSize}?isCompleted=true`;
+					url = `http://demcehnko-aleks-blue-green-lb-1120576598.us-east-1.elb.amazonaws.com/api/todo/${pageNumber - 1}/${pageSize}?isCompleted=true`;
 				} else if(filter === 'Not Completed'){
-					url = `http://34.226.168.162:3001/api/todo/${pageNumber - 1}/${pageSize}?isCompleted=false`;
+					url = `http://demcehnko-aleks-blue-green-lb-1120576598.us-east-1.elb.amazonaws.com/api/todo/${pageNumber - 1}/${pageSize}?isCompleted=false`;
 				}
 				
 				response = await axios.get(url, {headers: {'Authorization': `Bearer ${sessionStorage.getItem('token')}`,}});

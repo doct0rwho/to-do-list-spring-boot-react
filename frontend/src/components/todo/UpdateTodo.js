@@ -24,7 +24,7 @@ function UpdateTodo({isAuthenticated, setIsAuthenticated, match}) {
     e.preventDefault();
   
     try {
-      await axios.put(`http://34.226.168.162:3001/api/todo/${match.params.id}`, {title, targetDate}, {
+      await axios.put(`http://demcehnko-aleks-blue-green-lb-1120576598.us-east-1.elb.amazonaws.com/api/todo/${match.params.id}`, {title, targetDate}, {
         headers: {
           'Authorization': `Bearer ${sessionStorage.getItem('token')}`
         }
@@ -49,7 +49,7 @@ function UpdateTodo({isAuthenticated, setIsAuthenticated, match}) {
     const loadData = async () => {
       let response = null;
       try {
-        response = await axios.get(`http://34.226.168.162:3001/api/todo/${match.params.id}`, {
+        response = await axios.get(`http://demcehnko-aleks-blue-green-lb-1120576598.us-east-1.elb.amazonaws.com/api/todo/${match.params.id}`, {
           headers: {
 						'Authorization': `Bearer ${sessionStorage.getItem('token')}`
 					}
