@@ -10,7 +10,7 @@ phases:
  post_build:
    commands:
      - echo Build completed on `date`   
-     - aws s3 cp frontend/build/ s3://demchenko.oleksandr-fe-hosting-lab2/ --recursive
+     
 artifacts:
   base-directory: frontend/build
   files:
